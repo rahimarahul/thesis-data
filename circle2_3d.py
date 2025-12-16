@@ -1,7 +1,6 @@
 import numpy as np
 from sklearn.datasets import make_circles
-import common_utils
-import plotly.graph_objects as go
+import common_utils 
 
 # ---- Create 2D concentric circles ----
 X, y = make_circles(
@@ -22,4 +21,5 @@ extra_points = np.array([
     [0.8, 0, 0],
 [0, 0.75, 0.5]
 ])
+
 fig = common_utils.create_3d_figure(X_3d, y, extra_points)
