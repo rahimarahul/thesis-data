@@ -34,7 +34,7 @@ def generate_and_save(n_samples=5000,prefix='data'):
     X, y, sw = generate_blob_dataset(n_samples=n_samples)
 
     # Train/test split (we only plot train)
-    X_train, _, y_train, _, sw_train, _ = train_test_split(X, y, sw, test_size=0.9, random_state=42)
+    X_train, _, y_train, _, sw_train, _ = train_test_split(X, y, test_size=0.9, random_state=42)
     extra_points = np.array([ [0, 0, 0] ])
     fig = common_utils.create_3d_figure(X, y,sw, extra_points)
     common_utils.save_results(prefix, X, y, fig)
@@ -44,4 +44,5 @@ def generate_and_save(n_samples=5000,prefix='data'):
 # ----------------------------------------------------------
 #  Run it
 # ----------------------------------------------------------
+
 X, y, sw, fig = generate_and_save(n_samples=20000,prefix="blob_2_1IB")
