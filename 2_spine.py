@@ -1,7 +1,7 @@
 import numpy as np
 import plotly.graph_objects as go
 
-import common_utils
+
 
 # Parameter t from -π to π
 t = np.linspace(-np.pi, np.pi, 2000)
@@ -80,5 +80,6 @@ fig.update_layout(
     width=900,
     height=900
 )
+
 
 fig.show()
